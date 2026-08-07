@@ -1,0 +1,22 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  errors:
+    # Treat these as errors rather than warnings.
+    missing_return: error
+    dead_code: warning
+  exclude:
+    - '**/*.g.dart' # no generated files but keep the exclude as a safeguard
+
+linter:
+  rules:
+    prefer_single_quotes: true
+    avoid_print: true
+    prefer_const_constructors: true
+    prefer_const_literals_to_create_immutables: true
+    prefer_final_locals: true
+    unnecessary_lambdas: true
+    avoid_unnecessary_containers: true
+    sized_box_for_whitespace: true
+    use_super_parameters: true
+    require_trailing_commas: true

@@ -1,0 +1,11 @@
+targets:
+  $default:
+    builders:
+      slang_build_runner:
+        options:
+          base_locale: fr
+          input_directory: assets/i18n
+          output_directory: lib/i18n
+          output_file_name: strings.g.dart
+          lazy_loading: false
+          string_interpolation: braces

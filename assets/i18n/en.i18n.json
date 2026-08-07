@@ -1,0 +1,132 @@
+{
+  "common": {
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "error": "Error: {error}"
+  },
+  "garden": {
+    "greetingMorning": "Good morning 🌿",
+    "greetingDay": "Good afternoon 🌱",
+    "greetingEvening": "Good evening 🌙",
+    "todayProgress": "{done}/{total} today",
+    "settingsTooltip": "Settings",
+    "emptyTitle": "Your garden awaits",
+    "emptySubtitle": "Create your first habit\nto plant your first seed.",
+    "addHabitLabel": "Habit",
+    "loadError": "Could not load your garden"
+  },
+  "habitDetail": {
+    "statStreak": "Current streak",
+    "statRecord": "Record",
+    "statRate": "30d rate",
+    "last30Days": "Last 30 days",
+    "checkIn": "Complete for today",
+    "completedToday": "Completed today!",
+    "undoCheckIn": "Undo completion",
+    "archive": "Archive",
+    "notFound": "This habit no longer exists.",
+    "deleteTitle": "Delete habit?",
+    "deleteBody": "All tracking data will be permanently lost."
+  },
+  "plantStage": {
+    "seed": "Seed 🌑",
+    "sprout": "Sprout 🌱",
+    "young": "Young plant 🌿",
+    "mature": "Mature plant 🌳",
+    "legendary": "Legendary plant ✨"
+  },
+  "addHabit": {
+    "title": "New habit",
+    "namePlaceholder": "Meditation, reading, exercise…",
+    "nameRequired": "Give your habit a name",
+    "nameMinLength": "At least 2 characters",
+    "sectionFrequency": "Frequency",
+    "sectionPlant": "Plant",
+    "sectionColor": "Pot colour",
+    "submit": "Plant it 🌱",
+    "reminderSet": "Reminder at {time}",
+    "reminderAdd": "Add a reminder (optional)"
+  },
+  "habitCard": {
+    "start": "Start",
+    "thisWeekDone": "This wk. ✓"
+  },
+  "archived": {
+    "title": "Archived habits",
+    "restoreTooltip": "Restore",
+    "deleteTooltip": "Delete permanently",
+    "restoredSnackbar": "{name} restored 🌱",
+    "deleteTitle": "Delete permanently?",
+    "deleteBody": "{name} and all its history will be deleted. This cannot be undone.",
+    "emptyTitle": "No archived habits",
+    "emptySubtitle": "Habits you archive\nwill appear here."
+  },
+  "settings": {
+    "title": "Settings",
+    "sectionAppearance": "Appearance",
+    "themeSystem": "System",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "sectionHabits": "Habits",
+    "archivedTitle": "Archived habits",
+    "archivedSubtitle": "View and restore archived habits.",
+    "gracePeriodTitle": "Grace period (1 day)",
+    "gracePeriodSubtitle": "One missed day forgiven per streak.",
+    "sectionNotifications": "Notifications",
+    "notifChecking": "Checking…",
+    "notifActive": "Notifications enabled",
+    "notifActivateTitle": "Enable notifications",
+    "notifActivateSubtitle": "Daily reminders for your habits.",
+    "notifDeniedSnackbar": "Allow notifications in your device Settings.",
+    "sectionAbout": "About",
+    "version": "Version",
+    "versionNumber": "1.0.0",
+    "appDescription": "Build habits, grow plants."
+  },
+  "onboarding": {
+    "next": "Next",
+    "start": "Get started 🌱",
+    "welcomeTitle": "Welcome to Morpho",
+    "welcomeSubtitle": "Build lasting habits\nand watch your plants flourish.",
+    "howTitle": "How does it work?",
+    "step1Title": "Create a habit",
+    "step1Subtitle": "Choose your plant and customise your pot.",
+    "step2Title": "Check in daily",
+    "step2Subtitle": "One tap a day to water your plant.",
+    "step3Title": "Build your streak",
+    "step3Subtitle": "The longer your streak, the more your plant evolves.",
+    "step4Title": "Reach legendary",
+    "step4Subtitle": "100 consecutive days — the ultimate plant.",
+    "notifGrantedTitle": "You're all set!",
+    "notifTitle": "Never miss a day",
+    "notifGrantedSubtitle": "Reminders are on. Manage them per habit.",
+    "notifSubtitle": "Enable reminders so you never forget to check in.",
+    "notifButton": "Enable notifications"
+  },
+  "frequency": {
+    "daily": "Daily",
+    "twiceWeek": "2×/week",
+    "thriceWeek": "3×/week",
+    "fourWeek": "4×/week",
+    "fiveWeek": "5×/week",
+    "sixWeek": "6×/week",
+    "weekly": "Weekly",
+    "dailyShort": "Daily",
+    "twiceWeekShort": "2×/wk",
+    "thriceWeekShort": "3×/wk",
+    "fourWeekShort": "4×/wk",
+    "fiveWeekShort": "5×/wk",
+    "sixWeekShort": "6×/wk",
+    "weeklyShort": "Weekly",
+    "streakUnitDay": "d",
+    "streakUnitWeek": "wk"
+  },
+  "plantType": {
+    "fern": "Fern",
+    "cactus": "Cactus",
+    "orchid": "Orchid",
+    "bonsai": "Bonsai",
+    "sunflower": "Sunflower",
+    "bamboo": "Bamboo"
+  }
+}

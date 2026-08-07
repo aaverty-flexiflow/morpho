@@ -1,0 +1,10 @@
+# Private git repo that stores encrypted certificates and provisioning profiles.
+# Create an empty private repo (e.g. github.com/flexiflow/morpho-match) and set
+# MATCH_GIT_URL in your environment / GitHub secrets.
+git_url(ENV["MATCH_GIT_URL"])
+
+storage_mode("git")
+type("appstore")
+
+app_identifier(["fr.flexiflow.morpho"])
+username(ENV["APPLE_ID"])

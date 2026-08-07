@@ -1,0 +1,132 @@
+{
+  "common": {
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "error": "Erreur : {error}"
+  },
+  "garden": {
+    "greetingMorning": "Bonjour 🌿",
+    "greetingDay": "Bonne journée 🌱",
+    "greetingEvening": "Bonsoir 🌙",
+    "todayProgress": "{done}/{total} aujourd'hui",
+    "settingsTooltip": "Paramètres",
+    "emptyTitle": "Ton jardin t'attend",
+    "emptySubtitle": "Crée ta première habitude\npour planter ta première graine.",
+    "addHabitLabel": "Habitude",
+    "loadError": "Impossible de charger ton jardin"
+  },
+  "habitDetail": {
+    "statStreak": "Streak actuel",
+    "statRecord": "Record",
+    "statRate": "30j taux",
+    "last30Days": "30 derniers jours",
+    "checkIn": "Valider pour aujourd'hui",
+    "completedToday": "Complété aujourd'hui !",
+    "undoCheckIn": "Annuler la validation",
+    "archive": "Archiver",
+    "notFound": "Cette habitude n'existe plus.",
+    "deleteTitle": "Supprimer l'habitude ?",
+    "deleteBody": "Toutes les données de suivi seront perdues."
+  },
+  "plantStage": {
+    "seed": "Graine 🌑",
+    "sprout": "Pousse 🌱",
+    "young": "Plante jeune 🌿",
+    "mature": "Plante mature 🌳",
+    "legendary": "Plante légendaire ✨"
+  },
+  "addHabit": {
+    "title": "Nouvelle habitude",
+    "namePlaceholder": "Méditation, lecture, sport…",
+    "nameRequired": "Donne un nom à ton habitude",
+    "nameMinLength": "Au moins 2 caractères",
+    "sectionFrequency": "Fréquence",
+    "sectionPlant": "Plante",
+    "sectionColor": "Couleur du pot",
+    "submit": "Planter 🌱",
+    "reminderSet": "Rappel à {time}",
+    "reminderAdd": "Ajouter un rappel (optionnel)"
+  },
+  "habitCard": {
+    "start": "Commencer",
+    "thisWeekDone": "Cette sem. ✓"
+  },
+  "archived": {
+    "title": "Habitudes archivées",
+    "restoreTooltip": "Restaurer",
+    "deleteTooltip": "Supprimer définitivement",
+    "restoredSnackbar": "{name} restaurée 🌱",
+    "deleteTitle": "Supprimer définitivement ?",
+    "deleteBody": "{name} et tout son historique seront supprimés. Cette action est irréversible.",
+    "emptyTitle": "Aucune habitude archivée",
+    "emptySubtitle": "Les habitudes que tu archives\napparaîtront ici."
+  },
+  "settings": {
+    "title": "Paramètres",
+    "sectionAppearance": "Apparence",
+    "themeSystem": "Système",
+    "themeLight": "Clair",
+    "themeDark": "Sombre",
+    "sectionHabits": "Habitudes",
+    "archivedTitle": "Habitudes archivées",
+    "archivedSubtitle": "Voir et restaurer les habitudes archivées.",
+    "gracePeriodTitle": "Période de grâce (1 jour)",
+    "gracePeriodSubtitle": "Un oubli toléré par semaine sans casser le streak.",
+    "sectionNotifications": "Notifications",
+    "notifChecking": "Vérification…",
+    "notifActive": "Notifications activées",
+    "notifActivateTitle": "Activer les notifications",
+    "notifActivateSubtitle": "Rappels quotidiens pour tes habitudes.",
+    "notifDeniedSnackbar": "Autorise les notifications dans les Réglages de l'appareil.",
+    "sectionAbout": "À propos",
+    "version": "Version",
+    "versionNumber": "1.0.0",
+    "appDescription": "Construis des habitudes, fais pousser des plantes."
+  },
+  "onboarding": {
+    "next": "Suivant",
+    "start": "Commencer 🌱",
+    "welcomeTitle": "Bienvenue sur Morpho",
+    "welcomeSubtitle": "Construis des habitudes solides\net regarde tes plantes s'épanouir.",
+    "howTitle": "Comment ça marche ?",
+    "step1Title": "Crée une habitude",
+    "step1Subtitle": "Choisis ta plante et personnalise ton pot.",
+    "step2Title": "Valide chaque jour",
+    "step2Subtitle": "Un geste quotidien pour arroser ta plante.",
+    "step3Title": "Construis ton streak",
+    "step3Subtitle": "Plus ton streak grandit, plus ta plante évolue.",
+    "step4Title": "Atteins le stade légendaire",
+    "step4Subtitle": "100 jours consécutifs — la plante ultime.",
+    "notifGrantedTitle": "C'est bon !",
+    "notifTitle": "Ne rate rien",
+    "notifGrantedSubtitle": "Les rappels sont activés. Tu peux les gérer habitude par habitude.",
+    "notifSubtitle": "Active les rappels pour ne pas oublier de valider tes habitudes chaque jour.",
+    "notifButton": "Activer les notifications"
+  },
+  "frequency": {
+    "daily": "Quotidien",
+    "twiceWeek": "2×/semaine",
+    "thriceWeek": "3×/semaine",
+    "fourWeek": "4×/semaine",
+    "fiveWeek": "5×/semaine",
+    "sixWeek": "6×/semaine",
+    "weekly": "Hebdomadaire",
+    "dailyShort": "Quotidien",
+    "twiceWeekShort": "2×/sem",
+    "thriceWeekShort": "3×/sem",
+    "fourWeekShort": "4×/sem",
+    "fiveWeekShort": "5×/sem",
+    "sixWeekShort": "6×/sem",
+    "weeklyShort": "Hebdo",
+    "streakUnitDay": "j",
+    "streakUnitWeek": "sem."
+  },
+  "plantType": {
+    "fern": "Fougère",
+    "cactus": "Cactus",
+    "orchid": "Orchidée",
+    "bonsai": "Bonsaï",
+    "sunflower": "Tournesol",
+    "bamboo": "Bambou"
+  }
+}

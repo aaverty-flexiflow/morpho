@@ -1,0 +1,4 @@
+app_identifier "fr.flexiflow.morpho"
+apple_dev_portal_id ENV["APPLE_ID"]
+itc_team_id "L6AURMZGGS"
+team_id "L6AURMZGGS"
