@@ -29,12 +29,23 @@ def version_name
 end
 
 def asc_api_key
-  app_store_connect_api_key(
-    key_id:       ENV.fetch("ASC_KEY_ID"),
-    issuer_id:    ENV.fetch("ASC_ISSUER_ID"),
-    key_filepath: ENV.fetch("ASC_KEY_PATH"),
-    in_house:     false,
-  )
+  require 'base64'
+
+  params = {
+    key_id:   ENV.fetch("ASC_KEY_ID"),
+    issuer_id: ENV.fetch("ASC_ISSUER_ID"),
+    in_house: false,
+  }
+
+  # CI: use base64 key content (avoids LibreSSL "invalid curve name" on macOS runners).
+  # Local: fall back to key file path.
+  if ENV["ASC_KEY_CONTENT"]
+    params[:key_content] = Base64.decode64(ENV.fetch("ASC_KEY_CONTENT"))
+  else
+    params[:key_filepath] = ENV.fetch("ASC_KEY_PATH")
+  end
+
+  app_store_connect_api_key(**params)
 end
 
 # ─────────────────────────────────────────────────────────────────────────────
