@@ -107,7 +107,7 @@ platform :ios do
     pilot(
       api_key:                           asc_api_key,
       app_identifier:                    BUNDLE_ID,
-      ipa:                               Dir.glob("build/ios/ipa/*.ipa").first,
+      ipa:                               Dir.glob("#{ROOT}/build/ios/ipa/*.ipa").first,
       skip_waiting_for_build_processing: true,
       changelog:                         "#{version_name}+#{build_num}",
     )
@@ -133,7 +133,7 @@ platform :ios do
     deliver(
       api_key:           asc_api_key,
       app_identifier:    BUNDLE_ID,
-      ipa:               Dir.glob("build/ios/ipa/*.ipa").first,
+      ipa:               Dir.glob("#{ROOT}/build/ios/ipa/*.ipa").first,
       submit_for_review: true,
       automatic_release: false,
       force:             true,
