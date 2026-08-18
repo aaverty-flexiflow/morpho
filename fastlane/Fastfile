@@ -48,6 +48,27 @@ def asc_api_key
   app_store_connect_api_key(**params)
 end
 
+# Forces Xcode to use manual signing with the Match profiles for both targets.
+def setup_signing
+  [
+    { target: "Runner",       bundle_id: BUNDLE_ID },
+    { target: "MorphoWidget", bundle_id: "#{BUNDLE_ID}.MorphoWidget" },
+  ].each do |t|
+    profile_env_key = "sigh_#{t[:bundle_id]}_appstore_profile-name"
+    profile_name    = ENV[profile_env_key]
+    next unless profile_name
+
+    update_code_signing_settings(
+      use_automatic_signing: false,
+      path:                  "ios/Runner.xcodeproj",
+      team_id:               TEAM_ID,
+      code_sign_identity:    "Apple Distribution",
+      targets:               [t[:target]],
+      profile_name:          profile_name,
+    )
+  end
+end
+
 # ─────────────────────────────────────────────────────────────────────────────
 # iOS
 # ─────────────────────────────────────────────────────────────────────────────
@@ -59,7 +80,7 @@ platform :ios do
     match(
       type:           "appstore",
       api_key:        asc_api_key,
-      app_identifier: BUNDLE_ID,
+      app_identifier: [BUNDLE_ID, "#{BUNDLE_ID}.MorphoWidget"],
       readonly:       false,
     )
   end
@@ -73,9 +94,12 @@ platform :ios do
     match(
       type:           "appstore",
       api_key:        asc_api_key,
-      app_identifier: BUNDLE_ID,
+      app_identifier: [BUNDLE_ID, "#{BUNDLE_ID}.MorphoWidget"],
       readonly:       is_ci,
     )
+
+    # Force manual signing so Xcode uses the Match profiles instead of auto-signing
+    setup_signing
 
     sh "flutter build ipa --release --export-method app-store --build-number=#{build_num}"
 
@@ -97,9 +121,11 @@ platform :ios do
     match(
       type:           "appstore",
       api_key:        asc_api_key,
-      app_identifier: BUNDLE_ID,
+      app_identifier: [BUNDLE_ID, "#{BUNDLE_ID}.MorphoWidget"],
       readonly:       true,
     )
+
+    setup_signing
 
     sh "flutter build ipa --release --export-method app-store"
 
