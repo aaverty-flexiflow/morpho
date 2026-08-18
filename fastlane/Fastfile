@@ -1,5 +1,6 @@
 BUNDLE_ID = "fr.flexiflow.morpho"
 TEAM_ID   = "L6AURMZGGS"
+ROOT      = File.expand_path('..', __dir__)
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Helpers
@@ -12,7 +13,7 @@ def resolve_build_number
     return ENV["FLUTTER_BUILD_NUMBER"].to_i
   end
 
-  pubspec_path = File.join(Dir.pwd, "pubspec.yaml")
+  pubspec_path = File.join(ROOT, "pubspec.yaml")
   pubspec      = File.read(pubspec_path)
   m            = pubspec.match(/^version:\s+(\d+\.\d+\.\d+)\+(\d+)/)
   new_build    = m[2].to_i + 1
@@ -25,7 +26,7 @@ def resolve_build_number
 end
 
 def version_name
-  File.read(File.join(Dir.pwd, "pubspec.yaml")).match(/^version:\s+(\d+\.\d+\.\d+)/)[1]
+  File.read(File.join(ROOT, "pubspec.yaml")).match(/^version:\s+(\d+\.\d+\.\d+)/)[1]
 end
 
 def asc_api_key
