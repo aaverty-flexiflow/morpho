@@ -49,6 +49,40 @@ def asc_api_key
   app_store_connect_api_key(**params)
 end
 
+# Writes ios/ExportOptions.plist with explicit profile mapping for app + widget.
+# Flutter passes this to xcodebuild so both targets are signed correctly.
+def write_export_options
+  main_profile   = ENV["sigh_#{BUNDLE_ID}_appstore_profile-name"]   || "match AppStore #{BUNDLE_ID}"
+  widget_profile = ENV["sigh_#{BUNDLE_ID}.MorphoWidget_appstore_profile-name"] || "match AppStore #{BUNDLE_ID}.MorphoWidget"
+
+  plist = <<~PLIST
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+    <plist version="1.0">
+    <dict>
+        <key>method</key>
+        <string>app-store</string>
+        <key>teamID</key>
+        <string>#{TEAM_ID}</string>
+        <key>uploadSymbols</key>
+        <true/>
+        <key>provisioningProfiles</key>
+        <dict>
+            <key>#{BUNDLE_ID}</key>
+            <string>#{main_profile}</string>
+            <key>#{BUNDLE_ID}.MorphoWidget</key>
+            <string>#{widget_profile}</string>
+        </dict>
+    </dict>
+    </plist>
+  PLIST
+
+  path = File.join(ROOT, "ios", "ExportOptions.plist")
+  File.write(path, plist)
+  UI.message("ExportOptions.plist written → #{path}")
+  path
+end
+
 # Forces Xcode to use manual signing with the Match profiles for both targets.
 def setup_signing
   [
@@ -101,8 +135,9 @@ platform :ios do
 
     # Force manual signing so Xcode uses the Match profiles instead of auto-signing
     setup_signing
+    plist = write_export_options
 
-    sh "flutter build ipa --release --export-method app-store --build-number=#{build_num}"
+    sh "flutter build ipa --release --export-options-plist='#{plist}' --build-number=#{build_num}"
 
     pilot(
       api_key:                           asc_api_key,
@@ -127,8 +162,9 @@ platform :ios do
     )
 
     setup_signing
+    plist = write_export_options
 
-    sh "flutter build ipa --release --export-method app-store"
+    sh "flutter build ipa --release --export-options-plist='#{plist}'"
 
     deliver(
       api_key:           asc_api_key,
