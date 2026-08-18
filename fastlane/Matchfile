@@ -7,4 +7,3 @@ storage_mode("git")
 type("appstore")
 
 app_identifier(["fr.flexiflow.morpho"])
-username(ENV["APPLE_ID"])
